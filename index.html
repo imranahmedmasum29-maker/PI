@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Marketplace</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <h1 class="logo">Cyber<span>Market</span></h1>
+    <nav>
+      <input type="text" id="searchBox" placeholder="পণ্য খুঁজুন..." onkeyup="searchProducts()">
+      <a href="index.html">হোম</a>
+      <a href="login.html">লগইন</a>
+      <a href="#" onclick="openCart()">🛒 কার্ট (<span id="cartCount">0</span>)</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>🚀 আপনার অনলাইন মার্কেটপ্লেসে স্বাগতম</h2>
+    <p>সবচেয়ে ইউনিক ও নিরাপদ শপিং অভিজ্ঞতা</p>
+    <button onclick="showAlert()">এখনই কিনুন</button>
+  </section>
+
+  <!-- Product Section -->
+  <section class="products">
+    <h2>🔥 জনপ্রিয় পণ্যসমূহ</h2>
+    <div class="product-grid" id="productList">
+      <div class="product-card">
+        <img src="https://via.placeholder.com/200" alt="হেডফোন">
+        <h3>হেডফোন</h3>
+        <p>৳ ১২০০</p>
+        <button onclick="addToCart('হেডফোন', 1200)">কার্টে যোগ করুন</button>
+      </div>
+      <div class="product-card">
+        <img src="https://via.placeholder.com/200" alt="স্মার্ট ওয়াচ">
+        <h3>স্মার্ট ওয়াচ</h3>
+        <p>৳ ২৫০০</p>
+        <button onclick="addToCart('স্মার্ট ওয়াচ', 2500)">কার্টে যোগ করুন</button>
+      </div>
+      <div class="product-card">
+        <img src="https://via.placeholder.com/200" alt="গেমিং কীবোর্ড">
+        <h3>গেমিং কীবোর্ড</h3>
+        <p>৳ ৩৫০০</p>
+        <button onclick="addToCart('গেমিং কীবোর্ড', 3500)">কার্টে যোগ করুন</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cart Modal -->
+  <div id="cartModal" class="cart-modal">
+    <div class="cart-content">
+      <h2>🛒 আপনার কার্ট</h2>
+      <ul id="cartItems"></ul>
+      <p>মোট: ৳ <span id="totalPrice">0</span></p>
+      <button onclick="checkout()">💳 চেকআউট</button>
+      <button onclick="closeCart()">❌ বন্ধ করুন</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© ২০২৫ CyberMarket | Create by Imran</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
